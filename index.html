@@ -64,7 +64,7 @@ body {
 }
 
 .countdown-unit {
-    background: rgba(212, 160, 60, 0.9); /* more golden shade */
+    background: rgba(212, 160, 60, 0.9);
     color: #4a2e0c;
     padding: 15px 20px;
     border-radius: 15px;
@@ -159,6 +159,104 @@ footer {
     animation: fall 5s linear infinite;
 }
 @keyframes fall { to { transform: translateY(110vh) rotate(360deg); opacity: 0; } }
+
+
+/* ================================
+   MOBILE RESPONSIVE FIXES (ADDED)
+   ================================ */
+@media (max-width: 768px) {
+
+    .hero {
+        height: 75vh;
+    }
+
+    .names {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+
+    .subtitle {
+        font-size: 1.3rem;
+    }
+
+    .date {
+        font-size: 1.1rem;
+    }
+
+    .hero .content {
+        top: 32%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+    }
+
+    .countdown-wrapper {
+        top: 82%;
+        gap: 8px;
+    }
+
+    .countdown-unit {
+        min-width: 60px;
+        padding: 10px 12px;
+        font-size: 1rem;
+    }
+
+    .countdown-unit span {
+        font-size: 0.7rem;
+    }
+
+    .invitation .title {
+        font-size: 2rem;
+    }
+
+    .invitation .message {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+
+    .details {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .detail-card {
+        width: 85%;
+        padding: 20px;
+    }
+
+    .button-section {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .gold-btn {
+        width: 90%;
+        font-size: 1rem;
+        padding: 12px 0;
+    }
+
+    footer {
+        font-size: 1.1rem;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .names { font-size: 2rem; }
+    .subtitle { font-size: 1.1rem; }
+    .date { font-size: 1rem; }
+
+    .countdown-wrapper {
+        top: 85%;
+    }
+
+    .countdown-unit {
+        min-width: 50px;
+        padding: 8px 10px;
+    }
+}
 </style>
 </head>
 <body>
@@ -172,7 +270,6 @@ footer {
         <h2 class="subtitle">We Are Getting Engaged</h2>
         <p class="date">2 December 2025</p>
     </div>
-    <!-- Countdown boxes inside hero -->
     <div class="countdown-wrapper" id="countdown">
         <div class="countdown-unit">
             <div id="days">0</div>
@@ -208,7 +305,6 @@ footer {
     <div class="detail-card"><h3>Time</h3><p>6:00 PM Onward</p></div>
 </section>
 
-<!-- Buttons -->
 <div class="button-section">
     <a class="gold-btn" href="https://maps.app.goo.gl/2HBgXZpykNBUUkz77" target="_blank">📍 Open in Google Maps</a>
     <a class="gold-btn" href="https://wa.me/?text=Save%20the%20Date%20-%20Mayank%20%26%20Anjali%20Engagement%20on%202%20Dec%202025%20at%20JC%20Guest%20House%20-%20Location:%20https://maps.app.goo.gl/2HBgXZpykNBUUkz77" target="_blank">💬 Share on WhatsApp</a>
@@ -257,7 +353,6 @@ updateCountdown();
 setInterval(updateCountdown, 1000);
 </script>
 
-<!-- Music -->
 <audio autoplay loop>
     <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
 </audio>
